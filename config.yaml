@@ -1,0 +1,27 @@
+seed: 42
+
+dish_csv: data/dish.csv
+ingredients_csv: data/ingredients.csv
+image_root: data/images
+save_path: best_model.pt
+
+text_model: distilbert-base-uncased
+image_model: resnet18
+image_size: 224
+max_len: 64
+hidden_dim: 256
+dropout: 0.2
+
+epochs: 10
+batch_size: 4
+num_workers: 2
+val_size: 0.1
+use_log_target: false
+loss: l1
+
+TEXT_LR: 2.0e-5
+IMAGE_LR: 5.0e-5
+CLASSIFIER_LR: 5.0e-4
+weight_decay: 0.01
+
+evaluate_test: true
